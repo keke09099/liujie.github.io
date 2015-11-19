@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+li{ list-style:none;}
+input{ border:none;}
+
+.nav{ overflow:hidden; float:right; padding-top:16px; padding-right:12px;}
+.nav li{ float:left; margin-left:20px;}
+.nav li a{ color:#333; font-size:13px; }
+.nav li a.fb{font-weight:bold;}
+.nav li.more{ background:#38f; line-height:8px;}
+.nav li.more a{color:#fff;text-decoration:none; margin:8px; font-size:12px; display:block;}
+.box{}
+.box img{ width:270px; height:129px; position:absolute; top:100px;; left:50%; margin-left:-135px; margin-top:-65px;}
+.box .bottom{ position:absolute;left:50%; top:200px; margin-left:-320px; margin-top:-16px;}
+#t1{ width:530px; height:24px; border:1px solid #d9d9d9; padding:5px;}
+#btn1{ height:37px; width:100px; background:#3385ff; font-size:14px; color:#fff; margin-left:-8px;}
+p{ position:absolute; font-size:13px;color:#666;}
+p.tit{ bottom:190px; left:50%; margin-left:-130px;}
+p.list{bottom:160px; left:50%; margin-left:-180px;}
+p.list a{ color:#666;}
+#ul1{ display:none; width:540px; border:1px solid #ccc; position:absolute; top:37px; left:0; }
+#ul1 li{ font-size:14px; color:#000; line-height:22px;}
+#ul1 li:hover{ background:#f0f0f0;}
+</style>
+<script src="M2.js"></script>
+<script src="V2.js"></script>
+<script src="C2.js"></script>
+</head>
+
+<body>
+<ul id="nav" class="nav">
+	<li><a href="javascript:;" class="fb">糯米</a></li>
+    <li><a href="javascript:;" class="fb">新闻</a></li>
+    <li><a href="javascript:;" class="fb">hao123</a></li>
+    <li><a href="javascript:;" class="fb">地图</a></li>
+    <li><a href="javascript:;" class="fb">视频</a></li>
+    <li><a href="javascript:;" class="fb">贴吧</a></li>
+    <li><a href="javascript:;">登录</a></li>
+    <li><a href="javascript:;">设置</a></li>
+    <li class="more"><a href="javascript:;" >更多产品</a></li>
+</ul>
+<div id="box" class="box">
+	<img src="img/bd_logo1.png" alt="" />
+    <div class="bottom">
+        <input type="text" id="t1" />
+        <input type="submit" value="百度一下" id="btn1" />
+        <ul id="ul1"></ul>
+    </div>
+</div>
+
+<p class="tit">
+<a href="javascript:;">把百度设为主页</a>
+<a href="javascript:;">关于百度</a>
+<a href="javascript:;">About Baidu</a>
+</p>
+<p class="list">2015 Baidu <a href="javascript:;">使用百度前必读</a> 意见反馈 京ICP证030173号</p>
+</body>
+</html>

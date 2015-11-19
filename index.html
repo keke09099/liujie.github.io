@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>web</title>
+<link href="css/common.css" rel="stylesheet">
+<style>
+body{
+  background:url(images/skills-bg.jpg) no-repeat;
+  background-attachment: fixed;
+}
+/*header*/
+.intro .intro-body H1 {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: #2c3e50;
+}
+.intro {
+	display: table;
+	width: 100%;
+	height: auto;
+	padding: 100px 0;
+	text-align: center;
+	color: #fff;
+	background:url(images/bg.jpg) no-repeat center center;
+	background-color: #000;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+.intro .intro-body {
+	display: table-cell;
+	vertical-align: middle;
+	color: #555;
+}
+.intro .intro-body .intro-text {
+	float: left;
+	text-align: center;
+	max-width: 75%;
+}
+header .intro-text {
+	padding-top: 300px;
+	padding-bottom: 200px;
+}
+.intro .intro-body .intro-text {
+	font-size: 18px;
+}
+.intro .intro-body .intro-text p {
+	font-family:"Comic Sans MS", cursive;
+	font-size: 20px;
+	margin-bottom: 40px;
+	color: #76818d;
+	margin-top: 20px;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.btn-default {
+	color: #76818d;
+	background-color: transparent;
+	border-color: #76818d;
+	margin: 0 10px;
+	font-size: 16px;
+}
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
+	color: #eee;
+	background-color: #2c3e50;
+	border-color: #2c3e50;
+}
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  border: 1px solid #76818d;
+}
+/*nav*/
+#nav{width:100%; height:64px; background:#2c3e50; line-height:64px; font-size:18px;left:0; top:0; z-index:10;}
+#nav1{width:100%; height:64px; display:none;}
+.navbar_h{ margin-left:70px;}
+.navbar_h a{color:#f4f5f6;font-size:24px;}
+.navbar_c{ position:relative; width:700px; }
+.navbar_c li { float:left;height:64px; width:120px;text-align:center; position:relative; z-index:2} 
+.navbar_c li a{ color:#f4f5f6;}
+.navbar_c li.bg{ position:absolute; top:0; left:0;background:#e87e04; opacity:0.7; z-index:1; filter:alpha(opacity=70)}
+/*list*/
+.list{ text-align:center;}
+.list h2{ font-size:32px; color:#2c3e50; }
+.list .line{ width:70px; height:4px; background-color:#e87e04;border:none; margin-top:30px; margin-bottom:60px;}
+/*about*/
+.about{ padding:108px 275px 30px; background:#fff;}
+.about img{ width:200px; height:200px; margin-bottom:35px;}
+.about p{ text-indent:2em; text-align:left; line-height:20px; margin-bottom:30px; color:#616e7c;}
+/*protfio*/
+.protfio{ height:890px;position:relative;}
+.protfio .bg{ width:100%; background:#fff;opacity:0.2; filter:alpha(opacity=20); height:890px; position:absolute; top:0; left:0}
+.pro_box{height:850px; width:100%; position:absolute; top:0; left:0}
+.pro_box h2{ margin-top:80px;}
+.pro_box .por_nav{ display:inline-block; vertical-align:middle; margin-bottom:40px;}
+.pro_box .por_nav li{ float:left;border-right:2px solid #616e7c;}
+.por_nav li.brn{ border-right:none;}
+.por_nav li a{ margin:0 35px; color:#616e7c;}
+.por_nav li a.active{ color:#ee9304;}
+#ul1{ width:1136px;margin:20px auto 100px; overflow:hidden;}
+#ul1 li{ position:relative; float:left;width:262px; height:262px; overflow:hidden; margin:10px; border:1px solid #ccc;}
+#ul1 a{display:block;position: relative;}
+#ul1 li img{ width:262px; display:block;}
+#ul1 li span{cursor:pointer; width:262px; opacity:0.8; height:262px; background:#ccc;position:absolute; top:262px; left:0; font-size:30px; font-weight:bold; text-align:center; line-height:262px; color:#af6b1a}
+/*skills*/
+.skill{ height:700px; background-color:#fff; padding-top:80px; }
+.sk_list{ margin-left:240px;}
+.sk_list li{ width:500px; text-align:left; margin-bottom:40px;}
+.sk_list li span{ color:#e87e04; display:block; font-size:20px; margin-bottom:15px;}
+.sk_list li div{ width:700px; height:25px; background:#ccc; position:relative;}
+.sk_list li div b{ width:0; height:25px; background:#2c3e50; position:absolute; top:0; left:0;}
+.sk_list .percent{ color:#474d5d; font-size:20px; position:absolute; top:0; right:-70px;}
+/*experience*/
+.experience{padding:80px 240px 0; height:1050px; position:relative;}
+.experience .bg1{width:100%; background:#fff;opacity:0.2; filter:alpha(opacity=20); height:1500px; position:absolute; top:0; left:0}
+.exp_box { position:relative; padding-top:60px; margin:50px auto; width:100%;}
+.year { position:absolute; left:50%; z-index:1; margin-left:-75px; width:150px; height:150px; line-height:50px; border:1px solid #efefef;  background:#fff; border-radius:50%; color:#616e7c; font-size:18px; font-weight:bold; }
+.year1{ top:0;}
+.year2{ top:270px;}
+.year3{ top:540px;}
+.pipe { position:absolute; top:0; left:50%; margin-left:-2px; width:0; height:560px;; border-left:1px solid #ccc; border-right:1px solid #ccc; }
+.exp_list li { width:300px;text-align:left; margin-bottom:330px;font-size:14px; line-height:24px; }
+.exp_list li a{ color:#000}
+.left-bar { float:left; clear:left; margin-top:-50px;}
+.right-bar { float:right; clear:right;margin-top:210px;}
+/*imgs*/
+.imgs{ width:50px; height:50px; position:fixed;display:none; right:30px; bottom:30px;}
+/*contact*/
+.contact{ width:100%; height:500px; background-color:#000;opacity:0.5}
+</style>
+</head>
+
+<body>
+	<!-- Header -->
+<header class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="intro-text">
+          <h1>Hello, I'm Liu Jie</h1>
+          <p> Web Design Engineer</p>
+          <a href="#about" class="btn btn-default btn-lg page-scroll">About Me</a> <a href="#portfio" class="btn btn-default btn-lg page-scroll">My Portfolio</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+	<!-- nav -->
+<div id="nav" class="nav clearFix">
+    <div class="navbar_h fl"><a href="#">liujie</a></div>
+    <ul class="navbar_c fr clearFix" id="navbar_c">
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfio">Portfolio</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="bg"></li>
+    </ul>
+</div>
+<div id="nav1"></div>
+	<!--About-->
+<div id="about" class="about list">
+	<h2>ABOUT ME</h2>
+	<hr class="line" />
+    <img src="images/pic.jpg" alt="" />
+    <p>本人乐观开朗，严以律己，以诚待人，能够吃苦耐劳，工作积极主动。能熟练运用Word、Excel、Office相关软件；熟练使用DOM进行网页制作，掌握JQuery库，使用模块化（seajs,requirejs）进行开发，深刻理解闭包、作用域链、原型链的原理，熟练使用ajax与jsonp进行前后台交互，熟悉MVC架构以及设计模式，熟悉面向对象思想，熟练解决多浏览器兼容性问题。了解PHP、nodejs基本语法。</p>
+    <p>易于融入集体文化，能与他人建立良好的关系。具有团队合作精神，创新意识，有进取心，对工作负责，可适应高强度的工作。</p>
+</div>
+	<!--Portfio-->
+<div id="portfio" class="protfio list">
+	<div class="bg"></div>
+    <div class="pro_box">
+        <h2>MY PORTFIO</h2>
+        <hr class="line" />
+        <ul class="por_nav clearFix">
+            <li><a href="javascript:;" class="active">All</a></li>
+            <li><a href="javascript:;">Jsonp</a></li>
+            <li><a href="javascript:;">Ajax</a></li>
+            <li class="brn"><a href="javascript:;">Effect</a></li>
+        </ul>
+        <ul id="ul1">
+            <li>
+                <a href="dome/apple/index.html"><img src="images/01.jpg" alt="" /><span>Apple menu
+</span></a>
+                
+            </li>
+            <li>
+                 <a href="dome/baidu/index.html"><img src="images/02.jpg" alt="" /><span>Drop down menu
+
+</span></a>
+                
+            </li>
+            <li>
+                 <a href="dome/calu/index.html"><img src="images/03.jpg" alt="" /><span>Calendar</span></a>
+                
+            </li>
+            <li>
+                <a href="dome/scroll/index.html"><img src="images/04.jpg" alt="" /><span>Rolling slice
+</span></a>
+                
+            </li>
+            <li>
+                 <a href="dome/shoufengq/index.html"><img src="images/05.jpg" alt="" /><span>Accordion
+</span></a>
+                
+            </li>
+            <li>
+                 <a href="dome/tab/index.html"><img src="images/06.jpg" alt="" /><span>Auto playing tab
+</span></a>
+                
+            </li>
+            <li>
+                 <a href="dome/web QQ/index.html"><img src="images/07.jpg" alt="" /><span>Web QQ</span></a>
+                
+            </li>
+            <li>
+                 <a href="http://localhost/demo-07/demo-07.html"><img src="images/08.jpg" alt="" /><span>Wishing Wall
+</span></a>
+                
+            </li>
+        </ul>
+    </div>
+</div>
+	<!--MY SKILLS-->
+<div id="skills" class="skill list">
+	<h2>MY SKILLS</h2>
+	<hr class="line" />
+        <ul class="sk_list" id="sk_list">
+        	<li>
+            	<span>Html/Css</span>
+                <div>
+                    <b></b>
+                    <i class="percent">90</i>
+                </div>
+                
+            </li>
+            <li>
+            	<span>Js</span>
+                <div>
+                    <b></b>
+                    <i class="percent">85</i>
+                </div>
+            </li>
+            <li>
+            	<span>Web Design</span>
+                <div>
+                    <b></b>
+                    <i class="percent">80</i>
+                </div>
+            </li>
+            <li>
+            	<span>Photoshop</span>
+                <div>
+                    <b></b>
+                    <i class="percent">70</i>
+                </div>
+            </li>
+            <li>
+            	<span>Php</span>
+                <div>
+                    <b></b>
+                    <i class="percent">60</i>
+                </div>
+            </li>
+        </ul>
+</div>
+	<!--EXPERIENCE-->
+<div id="experience" class="experience list">
+	<div class="bg1"></div>
+	<h2>EXPERIENCE</h2>
+	<hr class="line" />
+    <div class="exp_box">
+		<p class="year year1"><br />TP印象摄影 <br />3周</p>
+        <p class="year year2"><br />webQQ聊天室  <br />1周</p>
+        <p class="year year3"><br />石家庄大学公寓网	4周</p>
+		<div class="pipe"></div>
+		<ul class=" exp_list clearFix">
+			<li class="left-bar">项目环境：window 、Linux<br />项目工具：sublime  photoshop cc<br />
+<a href=": http://www.2008tp.com/">项目地址: http://www.2008tp.com/</a><br />
+具体职责：主要负责静态页面编写,以及实现网页动态效果。
+项目描述：该项目主要是采用HTML+CSS对TP印象摄影官网进行布局和设计；使用JavaScript和JQuery实现页面上的动态效果以及交互效果，例如：选项卡、下拉菜单等；由于图片比较多，页面加载速度慢，用户体验较差。所以运用了延迟加载、预加载方法，对网站的用户体验以及访问速度进行优化。
+
+</li>
+			<li class="right-bar">项目环境：window WampServer<br />
+项目工具：subline  webStorm<br />
+项目描述：利用jsonp跨域交互的原理，一个即时通信工具，类似于腾讯，具备腾讯的基本功能，可以聊天，其主要功能包括：两人聊天，多人聊天，这其中用到了大量的Ajax技术。
+</li>
+			<li class="left-bar" >
+开发方式：小组开发（5人）<br />
+开发工具：Dreamweaver，PhotoShop，Flash<br />
+<a href=": http://www.sjzpt.edu.cn/">项目地址http://www.sjzpt.edu.cn/</a><br />
+开发知识：PS设计和切图、 DIV+CSS,JavaScript,Ajax,jQuery,PHP;<br />
+运行环境：Windows+Apache+MySQL+PHP<br />
+项目描述：石家庄大学学生公寓网站.该网站主要是面对整个学院的一个网站，它应用了phpcms2008框架，主要包括新闻模块、公告信息模块、办事流程等几大模块；新闻模块中主要实现了新闻的增、删、改、查，图片上传，综合查询，分页等功能。
+</li>
+		</ul>
+	</div>
+</div>
+	<!--定位-->
+<div>
+	<img src="images/top-arw.png" alt=""  class="imgs" id="btn"/></a>
+</div>
+	<!--尾部-->
+<script src="js/move.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+a{ text-decoration:none;}
+.box{ width:640px; height:180px; margin:200px auto; border:2px solid #ccc;position:relative; overflow:hidden;}
+.box img{ display:none;}
+.box img.active{ display:block}
+.box a{width:50px; height:50px; position:absolute; top:50%; margin-top:-25px; background:#000; opacity:0.2; filter:alpha(opacity=20); color:#fff; font-size:45px; font-weight:bold; text-align:center;}
+#prev{left:0;}
+#next{right:0;}
+</style>
+<script>
+window.onload=function(){
+		var oBox=document.getElementById('box');
+		var oPrev=document.getElementById('prev');
+		var oNext=document.getElementById('next');
+		var aImg=document.getElementsByTagName('img');
+		var n=0;
+		var timer=null;
+		oPrev.onclick=function(){
+				n--;
+				if(n<0)
+				{
+					n=aImg.length-1;	
+				}
+				tab();
+			};
+		oNext.onclick=tick;
+		function tick()
+		{
+			n++;
+			if(n==aImg.length)
+			{
+				n=0;	
+			}
+			tab();
+		};
+		timer=setInterval(tick,1000);
+		oBox.onmouseover=function(){
+				clearInterval(timer);
+			};
+		oBox.onmouseout=function(){
+				timer=setInterval(tick,1000);
+			};
+		function tab()
+		{
+			for(var i=0;i<aImg.length;i++)
+			{
+				aImg[i].className='';	
+			}	
+			aImg[n].className='active';
+		}
+	};
+	
+	
+	
+</script>
+</head>
+
+<body>
+<div id="box" class="box">
+	<div class="img_box">
+    	<a href="javascript:;" id="prev"><</a>
+        <img class="active" src="images/1.jpg" alt="" />
+        <img src="images/2.jpg" alt="" />
+        <img src="images/3.jpg" alt="" />
+        <img src="images/4.jpg" alt="" />
+        <a href="javascript:;" id="next">></a>
+    </div>
+</div>
+</body>
+</html>

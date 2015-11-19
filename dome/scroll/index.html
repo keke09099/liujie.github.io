@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+#box{ width:640px; height:180px; margin:100px auto; position:relative;}
+img{ width:640px; height:180px; }
+span{position:absolute; opacity:0; background:url(images/1.jpg) no-repeat; opacity:0;}
+input{ width:80px; height:40px; font-size:20px; text-align:center; line-height:40px; font-weight:bold; position:absolute; top:50px; left:100px;}
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('box');
+	var oBtn=document.getElementById('btn');
+	var oImg=document.getElementById('img1');
+	var row=9;
+	var col=10;
+	var W=640/col;
+	var H=180/row;
+	var aPos=[];
+	var now=0;
+	var aPath=['1.jpg','2.jpg','3.jpg'];
+	var Flag=false;
+	for(var r=0;r<row;r++)
+	{
+		for(var c=0;c<col;c++)
+		{
+			var oSpan=document.createElement('span');
+			oSpan.style.width=W+'px';
+			oSpan.style.height=H+'px';
+			var left=W*c;
+			var top=H*r;
+			oSpan.c=c;
+			oSpan.r=r;
+			oSpan.style.left=left+'px';
+			oSpan.style.top=top+'px';
+			oSpan.style.backgroundPosition=-left+'px -'+top+'px';
+			oDiv.appendChild(oSpan);
+			aPos.push(oSpan);
+				
+		}	
+	}
+	oBtn.onclick=function(){
+		if(Flag)
+			{
+				return false;	
+			}
+			Flag=true;
+			now++;  //当前的次数
+			for(var i=0;i<aPos.length;i++)
+			{
+				(function(index){
+					var c=aPos[i].c;
+					var r=aPos[i].r;
+					setTimeout(function(){
+						move(aPos[index],{'opacity':1},{
+							'complete':function(){
+							if(index ==aPos.length-1)
+							{
+								Flag =false;
+								oImg.src='images/'+aPath[now%aPath.length];  //运动完以后改变image的图片
+							}
+						}});
+						},500*(r+c));
+				})(i);
+				aPos[i].style.opacity=0;
+				aPos[i].style.backgroundImage='url(images/'+aPath[now%aPath.length]+')';	//运动完以后改变span的背景图片
+			}
+			
+			
+		};
+		};
+
+</script>
+</head>
+
+<body>
+<input type="button" value="Go" id="btn" />
+<div id="box">
+	<img src="images/2.jpg" alt="" id="img1"/>
+</div>
+</body>
+</html>

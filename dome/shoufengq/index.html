@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0}
+li{ list-style:none;}
+
+
+#ul1{position:relative; width:740px; height:180px;margin:200px auto; overflow:hidden;}
+#ul1 li{position:absolute; top:0; left:0; padding-left:20px; }
+#ul1 li span{ position:absolute; top:0; left:0; width:20px; height:100%; text-align:center; line-height:45px; font-size:14px; font-weight:bold; color:#333; }
+</style>
+<script src="jquery-1.7.2.js"></script>
+<script>
+$(function (){
+	var aLi=$('li');
+	var aSpan=$('span');
+	var nLiW=aLi.eq(0).outerWidth();
+	var nSpanW=20;
+	
+	// 处理位置
+	aLi.each(function (index){
+		if (index != 0)
+		{
+			var left=(index-1)*nSpanW+nLiW;
+			$(this).css('left', left);
+		}
+	});
+	
+	aSpan.mouseenter(function (){
+		var index=$(this).index('span');
+		
+		aLi.each(function (i){
+			if (i <= index)
+			{
+				$(this).animate({
+					left:i*nSpanW
+				});
+			}
+			else
+			{
+				$(this).animate({
+					left:nLiW+(i-1)*nSpanW
+				});
+			}
+		});
+	});
+	
+	
+});
+
+</script>
+</head>
+
+<body>
+<ul id="ul1">
+	<li>
+    	<img src="images/1.jpg" alt="" />
+       <span style=" background:#ccc;">魅力男装</span>
+    </li>
+    <li>
+    	<img src="images/2.jpg" alt="" />
+       <span style=" background:#8c5b3d;">时尚女装</span>
+    </li>
+    <li>
+    	<img src="images/3.jpg" alt="" />
+       <span style=" background:#baccd6;">羊绒专场</span>
+    </li>
+    <li>
+    	<img src="images/4.jpg" alt="" />
+       <span style=" background:#eed0d0;">舒适内衣</span>
+    </li>
+    <li>
+    	<img src="images/5.jpg" alt="" />
+       <span style=" background:#d5e8ec;">全国首发</span>
+    </li>
+</ul>
+</body>
+</html>

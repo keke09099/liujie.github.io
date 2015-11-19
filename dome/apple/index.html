@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0}
+body{ text-align:center; padding-top:200px;}
+div{ position:absolute; left:0; bottom:0; width:100%; text-align:center;}
+input{ width:120px; height:40px; font-size:20px; line-height:40px; text-align:center;}
+img{ width:64px; height:64px;}
+</style>
+<script>
+window.onload=function(){
+	var aImg=document.getElementsByTagName('img');
+	var aInp=document.getElementsByTagName('input');
+	var oDiv=document.getElementById('div1');
+	document.onmousemove=function(ev){
+		var oEvent=ev || oEvent;
+		for(var i=0;i<aImg.length;i++)
+		{
+			var s=getPos(aImg[i]);
+			var a=s.left+aImg[i].offsetWidth/2-oEvent.clientX;
+			var b=s.top+aImg[i].offsetHeight/2-oEvent.clientY;
+			var c=Math.sqrt(a*a+b*b);
+			
+			var scale=(1-c/500).toFixed(2);
+			(scale<0.5)&&(scale=0.5);
+			//改变图片大小
+			aImg[i].style.width=128*scale+'px';
+			aImg[i].style.height=128*scale+'px';
+			//input 赋值
+			aInp[i].value=scale;
+		}
+		};
+		function getPos(obj)
+		{
+			var left=0;
+			var top=0;
+			while(obj)
+			{
+				 left+=obj.offsetLeft;
+				 top+=obj.offsetTop;
+				obj=obj.offsetParent;	
+			}	
+			return {'top':top,'left':left};
+		}
+	};
+</script>
+</head>
+
+<body>
+<input type="text" />
+<input type="text" />
+<input type="text" />
+<input type="text" />
+<input type="text" />
+
+<div id="div1">
+	<img src="apple/1.png" alt="" />
+    <img src="apple/2.png" alt="" />
+    <img src="apple/3.png" alt="" />
+    <img src="apple/4.png" alt="" />
+    <img src="apple/5.png" alt="" />
+</div>
+</body>
+</html>
